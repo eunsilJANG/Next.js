@@ -1,104 +1,49 @@
-# NextPortfolio
+# 할 일 목록 (투두리스트)
 
-최신 웹 기술로 구축된 모던하고 반응형 포트폴리오 웹사이트입니다.
+Next.js, React, Tailwind CSS로 만든 아주 간단한 할 일 목록(투두리스트) 예제입니다.
+---
 
-## 🚀 기술 스택
+## 기술 스택
 
-- **프레임워크**: Next.js 15 (App Router)
-- **UI 라이브러리**: React 19
-- **스타일링**: Tailwind CSS 4
-- **언어**: TypeScript
-- **패키지 매니저**: pnpm
-
-## ✨ 주요 기능
-
-- 🎨 Tailwind CSS를 활용한 모던하고 반응형 디자인
-- ⚡ Next.js 15와 Turbopack으로 빠른 성능
-- 📱 모바일 우선 반응형 디자인
-- 🎯 부드러운 스크롤 네비게이션
-- 🌈 아름다운 그라디언트와 애니메이션
-- ♿ 접근성 중심 설계
-- 🔍 SEO 최적화
-
-## 🛠️ 시작하기
-
-### 필수 요구사항
-
-- Node.js 18+ 
-- pnpm (권장) 또는 npm
-
-### 설치 방법
-
-1. 저장소를 클론합니다:
-```bash
-git clone <your-repo-url>
-cd nextportfolio
-```
-
-2. 의존성을 설치합니다:
-```bash
-pnpm install
-```
-
-3. 개발 서버를 실행합니다:
-```bash
-pnpm dev
-```
-
-4. 브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 확인합니다.
-
-## 📁 프로젝트 구조
-
-```
-nextportfolio/
-├── app/
-│   ├── globals.css      # 전역 스타일과 Tailwind 임포트
-│   ├── layout.tsx       # 루트 레이아웃 컴포넌트
-│   └── page.tsx         # 홈페이지 컴포넌트
-├── public/              # 정적 자산
-├── package.json         # 의존성과 스크립트
-└── README.md           # 이 파일
-```
-
-## 🎨 커스터마이징
-
-### 색상
-프로젝트는 그라디언트가 포함된 모던한 색상 팔레트를 사용합니다. 다음에서 색상을 커스터마이징할 수 있습니다:
-- `app/globals.css` - CSS 변수
-- `app/page.tsx` - Tailwind 클래스
-
-### 콘텐츠
-`app/page.tsx`의 콘텐츠를 포트폴리오에 맞게 업데이트하세요:
-- 히어로 섹션 텍스트
-- 기능/기술 스택
-- 프로젝트 쇼케이스
-- 연락처 정보
-
-### 스타일링
-모든 스타일링은 Tailwind CSS 클래스로 완료됩니다. 디자인은 완전히 반응형이며 모던한 웹 디자인 원칙을 따릅니다.
-
-## 🚀 배포
-
-### Vercel (권장)
-1. 코드를 GitHub에 푸시합니다
-2. 저장소를 Vercel에 연결합니다
-3. 자동으로 배포됩니다
-
-### 기타 플랫폼
-프로젝트는 Next.js를 지원하는 모든 플랫폼에 배포할 수 있습니다:
-- Netlify
-- Railway
-- DigitalOcean App Platform
-- AWS Amplify
-
-## 📝 라이선스
-
-이 프로젝트는 오픈 소스이며 [MIT 라이선스](LICENSE) 하에 제공됩니다.
-
-## 🤝 기여하기
-
-기여를 환영합니다! Pull Request를 자유롭게 제출해 주세요.
+- **Next.js 15**  
+  React 기반의 최신 프레임워크로, 파일 기반 라우팅과 서버 컴포넌트 등 최신 기능을 지원합니다.
+- **React 19**  
+  컴포넌트 기반 UI 개발을 위한 라이브러리입니다.
+- **TypeScript**  
+  자바스크립트에 타입을 추가하여 코드의 안정성과 생산성을 높입니다.
+- **Tailwind CSS 4**  
+  유틸리티 퍼스트(utility-first) CSS 프레임워크로, 빠르고 일관된 스타일링이 가능합니다.
+- **pnpm**  
+  빠르고 효율적인 패키지 매니저입니다.
 
 ---
 
-Next.js, React, Tailwind CSS로 ❤️을 담아 구축되었습니다
+## 디자인 및 구현 방식
+
+- **반응형 디자인**  
+  Tailwind CSS의 유틸리티 클래스를 활용해 모바일, 태블릿, 데스크톱에서 모두 잘 보이도록 구현했습니다.
+- **상태 관리**  
+  React의 useState 훅을 사용하여 할 일 목록 상태를 관리합니다.
+- **접근성**  
+  폼 요소에 포커스 스타일을 적용하여 키보드 접근성도 고려했습니다.
+
+---
+
+## 폴더 구조
+
+```
+app/
+  ├─ page.tsx        # 메인 페이지. 할 일 목록 UI와 로직이 모두 이 파일에 구현되어 있습니다.
+  ├─ layout.tsx      # 전체 페이지의 레이아웃(HTML 구조, 폰트 등 공통 설정)
+  ├─ globals.css     # Tailwind CSS 및 전역 스타일 정의
+public/
+  └─ ...            # 정적 파일(이미지, favicon 등)을 넣는 폴더
+package.json        # 프로젝트 의존성, 스크립트 등 설정 파일
+README.md           # 프로젝트 설명 파일 (이 문서)
+tailwind.config.js  # Tailwind CSS 커스텀 설정 파일 (존재할 경우)
+tsconfig.json       # TypeScript 설정 파일
+```
+
+---
+
+
